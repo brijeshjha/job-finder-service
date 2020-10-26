@@ -1,5 +1,6 @@
 package com.zenjob.challenge.entity;
 
+import com.zenjob.challenge.constants.ErrorMessages;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,11 +10,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Version;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.Instant;
 import java.util.UUID;
@@ -34,7 +31,7 @@ public class Shift {
     private long version;
 
     @ManyToOne
-    @NotNull
+    @NotNull(message = ErrorMessages.JOB_INVALID)
     private Job job;
 
     private UUID talentId;

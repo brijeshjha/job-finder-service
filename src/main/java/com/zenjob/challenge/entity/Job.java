@@ -1,5 +1,6 @@
 package com.zenjob.challenge.entity;
 
+import com.zenjob.challenge.constants.ErrorMessages;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,7 +37,7 @@ public class Job {
     @Version
     private long version;
 
-    @NotNull
+    @NotNull(message = ErrorMessages.COMPANY_ID_INVALID)
     private UUID companyId;
 
     private Instant startTime;
