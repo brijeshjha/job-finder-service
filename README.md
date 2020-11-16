@@ -7,6 +7,8 @@ Job service contains the following features:
 * fetching the shifts for a specific job;
 * booking a talent to a shift.
 
+## Unit test relevant to Controller, Service and Repository are also Covered
+
 ### Product boundary conditions
 There are certain boundary conditions defined which __must__ be met by the service.
 * __jobs__ have to have at least one shift;
