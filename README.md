@@ -7,8 +7,6 @@ Job service contains the following features:
 * fetching the shifts for a specific job;
 * booking a talent to a shift.
 
-Feel free to adjust it as much as you like.
-
 ### Product boundary conditions
 There are certain boundary conditions defined which __must__ be met by the service.
 * __jobs__ have to have at least one shift;
@@ -30,6 +28,5 @@ I want to be able to cancel a single shift of a job I ordered previously
 I want to be able to cancel all shifts booked for a specific talent
 **AND** if the shifts are cancelled there has to be a new shifts created as a substitute with a new talent
 
-### Stretch goal
 **AS** a Company
 I want to be able to order for specific times rather than for a fixed one
